@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+<style>
+td{
+	padding-right:2em;
+}
+</style>
+</head>
+<body>
+	<div class="row">
+		<div id="left" class="col-md-6">CDs
+		<ul id="albumList">
+		<script id="albumListTemplate" type="text/template">
+		<li><a href="#<%= id %>"><%= name %></a></li>
+		</script>
+		</ul>				
+		</div>
+		<div id="right" class="col-md-6">Details
+		<table id="artistDetails">
+		<script id="artistDetailsTemplate" type="text/template">
+			<tr><td>Name:</td><td><%= name %></td></tr>
+			<tr><td>Artist:</td><td><%= artist %></td></tr>
+			<tr><td>Genre:</td><td><%= genre %></td></tr>
+		</script>
+		</table>
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<!-- underscore is used to render the template with the object from the api -->
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+	<!-- backbone is a router that respects the back button -->
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+	<script src="js/cds.js"></script>	
+</body>
+</html>
