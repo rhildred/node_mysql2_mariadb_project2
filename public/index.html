@@ -4,36 +4,56 @@
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
 <style>
-td{
+td, th{
 	padding-right:2em;
 }
+
+#searchForm {
+	float: right;
+	margin-top: 1em;
+}
+
 </style>
 <title>My Guitar Tab</title>
 </head>
 <body>
-<h1>My Guitar Tab</h1>
-<div class="row">
-	<div class="col-md-8">
-	Tab List
-	<table id="tableLeft">
-	<tr><td>Magazine</td><td>Issue</td><td>Fakebook</td><td>Title</td></tr>
-	<script id="tableLeftTemplate" type="text/template">
-	<tr><td><%= magazine %></td>
+<div class="container">
+	<form id="searchForm">
+		<input type="text" name="q" placeholder="search term" />
+		<button type="submit">Search</button>
+	</form>
+	<h1>My Guitar Tab</h1>
+	<div class="row">
+		<div class="col-md-8">
+		Tab List
+		<table>
+		<thead>
+		<tr><th>Title</th><th>Magazine</th><th>Issue</th><th>Fakebook</th></tr>
+		</thead>
+		<tbody id="tableLeft">
+		<script id="tableLeftTemplate" type="text/template">
+	<tr>
+		<td><a href="#<%= idRow %>"><%= title %></a></td>
+		<td><%= magazine %></td>
 		<td><%= issue %></td>
 		<td><%= fakebook %></td>
-		<td><%= title %></td></tr>
+	</tr>
 	</script>
-	</table>
-	</div>
-	<div class="col-md-4">
-	Details
-	<table id="tableRight">
-	<tr><td>title</td><td>GimMe Shelter</td></tr>
-	<tr><td>artist</td><td>Rolling Stones</td></tr>
-	<tr><td>difficulty</td><td>3</td></tr>
-	<tr><td>arranger</td><td>Andy Aledort</td></tr>
-	<tr><td>page number</td><td>140</td></tr>
-	</table>
+	</tbody>
+		</table>
+		</div>
+		<div class="col-md-4">
+		Details
+		<table id="tableRight">
+		<script id="tableRightTemplate" type="text/template">
+		<tr><td>title</td><td><%= title %></td></tr>
+		<tr><td>artist</td><td><%= artist %></td></tr>
+		<tr><td>difficulty</td><td><%= difficulty %></td></tr>
+		<tr><td>arranger</td><td><%= arranger %></td></tr>
+		<tr><td>page number</td><td><%= pageNumber %></td></tr>
+	</script>
+		</table>
+		</div>
 	</div>
 </div>
 	<!-- Bootstrap core JavaScript
