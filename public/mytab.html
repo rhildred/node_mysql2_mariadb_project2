@@ -8,7 +8,7 @@ td, th{
 	padding-right:2em;
 }
 
-#searchForm {
+#searchForm, #loginadd, #edit {
 	float: right;
 	margin-top: 1em;
 }
@@ -41,6 +41,7 @@ td, th{
 	</script>
 	</tbody>
 		</table>
+		<button type="button" id="loginadd">Login</button>
 		</div>
 		<div class="col-md-4">
 		Details
@@ -53,6 +54,7 @@ td, th{
 		<tr><td>page number</td><td><%= pageNumber %></td></tr>
 	</script>
 		</table>
+		<button type="button" id="edit" style="display:none">Edit</button>
 		</div>
 	</div>
 </div>
