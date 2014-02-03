@@ -1,0 +1,8 @@
+td, th{
+	padding-right:2em;
+}
+
+#searchForm {
+	float: right;
+	margin-top: 1em;
+}
