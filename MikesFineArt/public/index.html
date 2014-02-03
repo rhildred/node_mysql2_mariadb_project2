@@ -13,7 +13,13 @@
 	</form>
 	<h1>Art History</h1>
 	<div class="row">
-		<div class="col-md-4"><h2>Artist</h2></div>
+		<div class="col-md-4"><h2>Artist</h2>
+			<ul id="artistList" >
+			<script id="artistListTemplate" type="text/template">
+				<li><a href="#/artist/<%= idArtists %>"><%= name %></a></li>
+			</script>
+			</ul>
+		</div>
 		<div class="col-md-8">
 		<div><h2>Details</h2></div>
 		<div><h2>Works</h2></div>
